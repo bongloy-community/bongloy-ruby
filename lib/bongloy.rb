@@ -1,6 +1,6 @@
 require "bongloy/version"
+require "stripe"
 
-module Bongloy
-  class Error < StandardError; end
-  # Your code goes here...
-end
+Bongloy = Stripe
+
+Bongloy.api_base = "https://api.bongloy.com"
