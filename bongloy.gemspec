@@ -1,22 +1,27 @@
-require_relative 'lib/bongloy/version'
+require_relative "lib/bongloy"
 
 Gem::Specification.new do |spec|
   spec.name          = "bongloy"
   spec.version       = Bongloy::VERSION
+  spec.required_ruby_version = ">= 2.1.0"
   spec.authors       = ["Bongloy"]
-  spec.email         = ["sovon@bongloy.com"]
+  spec.email         = ["support@bongloy.com"]
 
   spec.summary       = "Ruby bindings for the Bongloy API"
   spec.description   = "Bongloy is the easiest way to accept payments online.  " \
                        "See https://bongloy.com for details."
-  spec.homepage      = "https://bongloy.com"
+  spec.homepage      = "https://www.bongloy.com/documentation"
   spec.license       = "MIT"
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/khomsovon/bongloy-ruby"
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata = {
+    "bug_tracker_uri"   => "https://github.com/bongloy/bongloy-ruby/issues",
+    "changelog_uri"     =>
+      "https://github.com/bongloy/bongloy-ruby/blob/master/CHANGELOG.md",
+    "documentation_uri" => "https://www.bongloy.com/documentation",
+    "github_repo"       => "ssh://github.com/bongloy/bongloy-ruby",
+    "homepage_uri"      => "https://www.bongloy.com/documentation",
+    "source_code_uri"   => "https://github.com/bongloy/bongloy-ruby",
+  }
 
   spec.add_dependency("stripe")
 
