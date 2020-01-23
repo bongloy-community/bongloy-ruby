@@ -1,4 +1,4 @@
-RSpec.describe Bongloy::Refund do
+RSpec.describe "Bongloy::Refund" do
   it "creates a refund" do
     charge = Bongloy::Charge.create(
       amount: 10000,

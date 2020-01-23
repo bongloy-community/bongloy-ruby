@@ -1,9 +1,7 @@
-require_relative "lib/bongloy"
-
 Gem::Specification.new do |spec|
   spec.name          = "bongloy"
-  spec.version       = Bongloy::VERSION
-  spec.required_ruby_version = ">= 2.1.0"
+  spec.version       = "1.0.0"
+  spec.required_ruby_version = ">= 2.3.0"
   spec.authors       = ["Bongloy"]
   spec.email         = ["support@bongloy.com"]
 
@@ -14,11 +12,11 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.metadata = {
-    "bug_tracker_uri"   => "https://github.com/bongloy/bongloy-ruby/issues",
+    "bug_tracker_uri"   => "https://github.com/khomsovon/bongloy-ruby/issues",
     "documentation_uri" => "https://www.bongloy.com/documentation",
-    "github_repo"       => "https://github.com/bongloy/bongloy-ruby",
+    "github_repo"       => "https://github.com/khomsovon/bongloy-ruby",
     "homepage_uri"      => "https://www.bongloy.com/documentation",
-    "source_code_uri"   => "https://github.com/bongloy/bongloy-ruby",
+    "source_code_uri"   => "https://github.com/khomsovon/bongloy-ruby",
   }
 
   # Specify which files should be added to the gem when it is released.

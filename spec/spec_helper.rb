@@ -1,6 +1,9 @@
 require "bundler/setup"
 require "bongloy"
 require "pry"
+require "dotenv"
+
+Dotenv.load
 
 # in ./support/ and its subdirectories.
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }

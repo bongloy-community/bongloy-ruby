@@ -1,8 +1,10 @@
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in bongloy.gemspec
 gemspec
 
-gem "rake"
-gem "rspec"
-gem "pry"
+group :development do
+  gem "rake"
+  gem "rspec"
+  gem "dotenv"
+  gem "pry"
+end

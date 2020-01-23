@@ -1,1 +1,1 @@
-Bongloy.api_key = ""
+Bongloy.api_key = ENV["BONGLOY_SECRET_KEY"]

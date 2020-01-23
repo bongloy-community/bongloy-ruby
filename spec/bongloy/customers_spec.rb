@@ -1,4 +1,4 @@
-RSpec.describe Bongloy::Customer do
+RSpec.describe "Bongloy::Customer" do
   it "creates a customer" do
     customer = Bongloy::Customer.create(
       email: "user@example.com",

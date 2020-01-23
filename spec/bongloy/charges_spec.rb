@@ -1,4 +1,4 @@
-RSpec.describe Bongloy::Charge do
+RSpec.describe "Bongloy::Charge" do
   it "creates a charge" do
     charge = Bongloy::Charge.create(
       amount: 10000,
