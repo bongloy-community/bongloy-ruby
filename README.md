@@ -1,6 +1,6 @@
 # Bongloy Ruby Library
 
-![Build Status](https://github.com/khomsovon/bongloy-ruby/workflows/CI/badge.svg)
+![Build Status](https://github.com/khomsovon/bongloy-ruby/workflows/Build%20Bongloy%20Ruby/badge.svg)
 
 The Bongloy Ruby library provides convenient access to the Bongloy API from
 applications written in the Ruby language. It includes a pre-defined set of
