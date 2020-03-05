@@ -2,55 +2,26 @@
 
 ![Build Status](https://github.com/khomsovon/bongloy-ruby/workflows/Build%20Bongloy%20Ruby/badge.svg)
 
-The Bongloy Ruby library provides convenient access to the Bongloy API from
-applications written in the Ruby language. It includes a pre-defined set of
-classes for API resources that initialize themselves dynamically from API
-responses which makes it compatible with a wide range of versions of the Bongloy 
-API.
-
-The library also provides other features. For example:
-
-- Easy configuration path for fast setup and use.
-- Helpers for pagination.
-- Tracking of "fresh" values in API resources so that partial updates can be
-  executed.
-- Built-in mechanisms for the serialization of parameters according to the
-  expectations of Bongloy's API.
-
-## Documentation
-
-See the [API docs](https://sandbox.bongloy.com/documentation).
+This is the Unofficial Ruby library for [Bongloy Payment Gateway](https://www.bongloy.com/).
 
 ## Installation
 
-You don't need this source code unless you want to modify the gem. If you just
-want to use the package, just run:
+Add this line to your application's Gemfile:
 
 ```sh
-gem install bongloy 
-```
-
-If you want to build the gem from source:
-
-```sh
-gem build bongloy.gemspec
-```
-
-### Requirements
-
-- Ruby 2.3+.
-
-### Bundler
-
-If you are installing via bundler, you should be sure to use the https rubygems
-source in your Gemfile, as any gems fetched over http could potentially be
-compromised in transit and alter the code of gems fetched securely over https:
-
-```ruby
-source 'https://rubygems.org'
-
-gem 'rails'
 gem 'bongloy'
+```
+
+And then execute:
+
+```sh
+$ bundle install
+```
+
+Or install it yourself as:
+
+```sh
+$ gem install bongloy
 ```
 
 ## Usage
@@ -68,6 +39,34 @@ Bongloy::Charge.list()
 
 # retrieve single charge
 Bongloy::Charge.retrieve(
-  "ch_18atAXCdGbJFKhCuBAa4532Z",
+  "6f3c1e38-d8a9-49c1-86b8-886c2b66eedb",
 )
 ```
+
+## Per-request Configuration
+
+For apps that need to authenticate on behalf of another account during the lifetime of a process, like one that uses [Bongloy Connect](https://sandbox.bongloy.com/documentation#bongloy-connect), it's also possible to set a per-request account:
+
+```ruby
+require "bongloy"
+
+Bongloy::Charge.list(
+  {},
+  {
+    api_key: "sk_test_...",
+    bongloy_account: "c756a678-0f2b-4b81-a8f1-8bb2ed80ece5"
+  }
+)
+
+Bongloy::Charge.retrieve(
+  "6f3c1e38-d8a9-49c1-86b8-886c2b66eedb",
+  {
+    api_key: "sk_test_...",
+    bongloy_account: "c756a678-0f2b-4b81-a8f1-8bb2ed80ece5"
+  }
+)
+```
+
+## Documentation
+
+See the [API docs](https://sandbox.bongloy.com/documentation).
