@@ -5,18 +5,18 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Bongloy"]
   spec.email         = ["support@bongloy.com"]
 
-  spec.summary       = "Ruby bindings for the Bongloy API"
+  spec.summary       = "This is the Unofficial Ruby library for Bongloy Payment Gateway API."
   spec.description   = "Bongloy is the easiest way to accept payments online." \
                        "See https://bongloy.com for details."
   spec.homepage      = "https://www.bongloy.com/documentation"
   spec.license       = "MIT"
 
   spec.metadata = {
-    "bug_tracker_uri"   => "https://github.com/khomsovon/bongloy-ruby/issues",
+    "bug_tracker_uri"   => "https://github.com/bongloy-community/bongloy-ruby/issues",
     "documentation_uri" => "https://www.bongloy.com/documentation",
-    "github_repo"       => "https://github.com/khomsovon/bongloy-ruby",
+    "github_repo"       => "https://github.com/bongloy-community/bongloy-ruby",
     "homepage_uri"      => "https://www.bongloy.com/documentation",
-    "source_code_uri"   => "https://github.com/khomsovon/bongloy-ruby",
+    "source_code_uri"   => "https://github.com/bongloy-community/bongloy-ruby",
   }
 
   # Specify which files should be added to the gem when it is released.
