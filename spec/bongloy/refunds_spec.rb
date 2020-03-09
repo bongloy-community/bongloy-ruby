@@ -54,8 +54,7 @@ RSpec.describe "Bongloy::Refund" do
 
     refunds = Bongloy::Refund.list
 
-    expect(refunds.data.is_a?(Array)).to eq(true)
-    expect(refunds.first.id).to eq(refund.id)
+    expect(refunds.map(&:id)).to include(refund.id)
   end
 
   def token

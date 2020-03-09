@@ -31,8 +31,7 @@ RSpec.describe "Bongloy::Customer" do
 
     customers = Bongloy::Customer.list
 
-    expect(customers.data.is_a?(Array)).to eq(true)
-    expect(customers.first.id).to eq(customer.id)
+    expect(customers.map(&:id)).to include(customer.id)
   end
 
   def token

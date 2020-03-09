@@ -28,7 +28,7 @@ RSpec.describe "Bongloy::Customer" do
 
     cards = Bongloy::Customer.list_sources(customer.id)
 
-    expect(cards.first.id).to eq(card.id)
+    expect(cards.map(&:id)).to include(card.id)
   end
 
   it "shows a card" do

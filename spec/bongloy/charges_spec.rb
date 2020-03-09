@@ -32,8 +32,7 @@ RSpec.describe "Bongloy::Charge" do
 
     charges = Bongloy::Charge.list
 
-    expect(charges.data.is_a?(Array)).to eq(true)
-    expect(charges.first.id).to eq(charge.id)
+    expect(charges.map(&:id)).to include(charge.id)
   end
 
   it "captures a charge" do
